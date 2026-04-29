@@ -132,16 +132,34 @@
                 <h2 class="text-center mb-4">Hình ảnh</h2>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <img src="https://dean1665.vn/uploads/school/avt-dhtv.jpg" alt="Khuôn viên trường" class="img-fluid rounded">
+                        <img src="https://dean1665.vn/uploads/school/avt-dhtv.jpg" alt="Khuôn viên trường" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('story1')">
                         <p class="text-center mt-2">Khuôn viên Đại học Trà Vinh</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <img src="https://navigates.vn/wp-content/uploads/2023/10/Hinh-anh-lop-hoc-Dai-hoc-Tra-Vinh-3.jpg" alt="Học tập" class="img-fluid rounded">
+                        <img src="https://navigates.vn/wp-content/uploads/2023/10/Hinh-anh-lop-hoc-Dai-hoc-Tra-Vinh-3.jpg" alt="Học tập" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('story2')">
                         <p class="text-center mt-2">Học tập và nghiên cứu</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Bạn bè" class="img-fluid rounded">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Bạn bè" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('story3')">
                         <p class="text-center mt-2">Cùng bạn bè</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Story Modal -->
+        <div class="modal fade" id="storyModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="storyTitle">Câu chuyện</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="storyContent"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                     </div>
                 </div>
             </div>
@@ -149,5 +167,29 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const stories = {
+            story1: {
+                title: "Khuôn viên Đại học Trà Vinh",
+                content: "Ngày đầu tiên đặt chân đến Đại học Trà Vinh, tôi đã bị choáng ngợp bởi khuôn viên xanh mát và rộng lớn. Những hàng cây xanh mướt, những tòa nhà hiện đại, và không khí học tập sôi động đã khiến tôi cảm thấy đây chính là nơi tôi sẽ dành 4 năm thanh xuân đẹp nhất. Mỗi sáng đi học, tôi thường dừng lại ở hồ nước giữa sân trường, ngắm nhìn ánh nắng ban mai rọi xuống mặt nước lấp lánh. Đó là khoảnh khắc bình yên giúp tôi sẵn sàng cho một ngày học tập đầy năng lượng."
+            },
+            story2: {
+                title: "Học tập và nghiên cứu",
+                content: "Những giờ học trên lớp luôn là khoảng thời gian tôi trân trọng nhất. Tôi còn nhớ buổi học đầu tiên về lập trình, khi thầy giáo viết những dòng code đầu tiên lên bảng, tôi cảm thấy như đang được mở ra một thế giới hoàn toàn mới. Từ những dòng 'Hello World' đơn giản đến những thuật toán phức tạp, mỗi bài học đều là một thử thách thú vị. Tôi thường ở lại thư viện đến tận khuya, cùng bạn bè tranh luận về các giải pháp lập trình, debug code cho đến khi tìm ra lỗi. Những đêm thức trắng ấy giờ nghĩ lại thật đáng nhớ."
+            },
+            story3: {
+                title: "Cùng bạn bè",
+                content: "Bạn bè là món quà quý giá nhất mà đại học mang lại cho tôi. Chúng tôi cùng nhau trải qua biết bao kỷ niệm: từ những buổi làm bài tập nhóm căng thẳng trước deadline, những buổi hackathon thức trắng đêm, đến những chuyến đi chơi cuối tuần để xả stress. Tôi nhớ nhất lần chúng tôi cùng nhau làm dự án cuối kỳ, mỗi người một nhiệm vụ, làm việc đến 3 giờ sáng nhưng không ai than mệt. Khi dự án hoàn thành và được điểm cao, niềm vui ấy không gì sánh bằng. Những người bạn này không chỉ là đồng đội học tập mà còn là anh em, là những người sẽ đồng hành cùng tôi trên con đường sự nghiệp sau này."
+            }
+        };
+
+        function showStory(storyId) {
+            const story = stories[storyId];
+            document.getElementById('storyTitle').textContent = story.title;
+            document.getElementById('storyContent').textContent = story.content;
+            const modal = new bootstrap.Modal(document.getElementById('storyModal'));
+            modal.show();
+        }
+    </script>
 </body>
 </html>

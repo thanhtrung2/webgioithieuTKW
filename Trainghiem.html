@@ -164,20 +164,38 @@
                 <h2 class="text-center mb-4">Kỷ niệm đáng nhớ</h2>
                 <div class="row">
                     <div class="col-md-3 mb-3">
-                        <img src="https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/473322270_1104806344462583_4221718231373178442_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=GjDPVZmOVv4Q7kNvwGq3cRX&_nc_oc=AdqIvEWOGnW_5pDcHZTf4aAWt7dY5tYxERS7b_zvaCP-pMd1527UOGEuvb_xcn2gf2Y&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=lubqBPLVZHPVm1kd1bDEXQ&_nc_ss=7b2a8&oh=00_Af1kMEs2p4XG5shvstIInJy3We6DSOD3r3ZhWW8lrPzP3A&oe=69F79957" alt="Năm 1" class="img-fluid rounded">
+                        <img src="https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/473322270_1104806344462583_4221718231373178442_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=GjDPVZmOVv4Q7kNvwGq3cRX&_nc_oc=AdqIvEWOGnW_5pDcHZTf4aAWt7dY5tYxERS7b_zvaCP-pMd1527UOGEuvb_xcn2gf2Y&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=lubqBPLVZHPVm1kd1bDEXQ&_nc_ss=7b2a8&oh=00_Af1kMEs2p4XG5shvstIInJy3We6DSOD3r3ZhWW8lrPzP3A&oe=69F79957" alt="Năm 1" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year1')">
                         <p class="text-center mt-2">Năm nhất</p>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <img src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/473081251_1104806787795872_7566194657441431916_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=nJ3zL01kQ00Q7kNvwG6mY71&_nc_oc=AdoR2xv5Gil7YK_s-4YIn_pet0GcGM2QUoMra55leJ5nwBoVEJ_jXhHZUZdm54SbOVI&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=3hGuJ5P3LjhIGzy3Kln5WA&_nc_ss=7b2a8&oh=00_Af2ig86SIy4ukmZO5U3h0SqLS9tTBddlPkqCxH0lnBEGmQ&oe=69F78719" alt="Năm 2" class="img-fluid rounded">
+                        <img src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/473081251_1104806787795872_7566194657441431916_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=nJ3zL01kQ00Q7kNvwG6mY71&_nc_oc=AdoR2xv5Gil7YK_s-4YIn_pet0GcGM2QUoMra55leJ5nwBoVEJ_jXhHZUZdm54SbOVI&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=3hGuJ5P3LjhIGzy3Kln5WA&_nc_ss=7b2a8&oh=00_Af2ig86SIy4ukmZO5U3h0SqLS9tTBddlPkqCxH0lnBEGmQ&oe=69F78719" alt="Năm 2" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year2')">
                         <p class="text-center mt-2">Năm hai</p>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <img src="anh3.jpg" alt="Năm 3" class="img-fluid rounded">
+                        <img src="anh3.jpg" alt="Năm 3" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year3')">
                         <p class="text-center mt-2">Năm ba</p>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <img src="anh4.jpg" alt="Năm 4" class="img-fluid rounded">
+                        <img src="anh4.jpg" alt="Năm 4" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year4')">
                         <p class="text-center mt-2">Năm tư</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Story Modal -->
+        <div class="modal fade" id="storyModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <h5 class="modal-title" id="storyTitle">Câu chuyện</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="storyContent" style="line-height: 1.8; font-size: 1.05em;"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                     </div>
                 </div>
             </div>
@@ -185,5 +203,33 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const stories = {
+            year1: {
+                title: "Năm nhất - Bước chân đầu tiên",
+                content: "Năm nhất là năm đầy bỡ ngỡ và hồi hộp. Tôi còn nhớ ngày đầu tiên bước vào giảng đường, cảm giác lạc lõng giữa hàng trăm gương mặt xa lạ. Nhưng chính những ngày đầu ấy đã dạy tôi cách tự lập và trưởng thành. Tôi học cách quản lý thời gian, cân bằng giữa học tập và sinh hoạt. Môn lập trình C++ đầu tiên khiến tôi đau đầu suốt cả tháng, nhưng khi chạy được chương trình đầu tiên, niềm vui ấy không gì sánh bằng. Năm nhất cũng là năm tôi tìm được nhóm bạn thân, những người sẽ đồng hành cùng tôi suốt 4 năm đại học."
+            },
+            year2: {
+                title: "Năm hai - Khám phá đam mê",
+                content: "Năm hai là năm tôi thực sự tìm thấy đam mê với lập trình web. Từ những dòng HTML, CSS đơn giản, tôi dần dần chinh phục JavaScript và các framework hiện đại. Tôi nhớ mãi dự án nhóm đầu tiên - một website quản lý thư viện. Chúng tôi làm việc không ngừng nghỉ, tranh luận về từng tính năng, từng dòng code. Có lúc mâu thuẫn, có lúc muốn bỏ cuộc, nhưng cuối cùng khi demo thành công trước lớp, tất cả đều xứng đáng. Năm hai cũng là năm tôi tham gia cuộc thi lập trình đầu tiên, tuy không đạt giải cao nhưng kinh nghiệm thu được vô cùng quý giá."
+            },
+            year3: {
+                title: "Năm ba - Thực chiến và trưởng thành",
+                content: "Năm ba đánh dấu bước ngoặt quan trọng trong hành trình học tập của tôi. Tôi được nhận vào thực tập tại một công ty phần mềm địa phương. Lần đầu tiên làm việc với code base thật, với quy trình chuyên nghiệp, tôi nhận ra mình còn nhiều thứ phải học. Những senior developer đã dạy tôi không chỉ về kỹ thuật mà còn về thái độ làm việc, về cách làm việc nhóm hiệu quả. Tôi học được cách code review, cách viết test, cách tối ưu hiệu suất. Mỗi ngày đi thực tập là một ngày học hỏi điều mới. Năm ba cũng là năm tôi tham gia hackathon và may mắn lọt vào vòng chung kết, một trải nghiệm đáng nhớ không bao giờ quên."
+            },
+            year4: {
+                title: "Năm tư - Chuẩn bị cho tương lai",
+                content: "Năm cuối đại học, tôi tập trung hoàn thiện đồ án tốt nghiệp và chuẩn bị cho sự nghiệp. Đồ án của tôi là một hệ thống quản lý bán hàng online hoàn chỉnh, áp dụng tất cả những gì đã học trong 4 năm. Từ thiết kế database, xây dựng API, đến phát triển giao diện người dùng, mỗi phần đều được tôi chăm chút kỹ lưỡng. Tôi cũng bắt đầu xây dựng portfolio cá nhân, tham gia các buổi career fair để kết nối với các công ty. Nhìn lại 4 năm đại học, tôi thấy mình đã thay đổi rất nhiều - từ một sinh viên năm nhất bỡ ngỡ đến một lập trình viên tự tin, sẵn sàng bước vào thị trường lao động. Đại học Trà Vinh không chỉ cho tôi kiến thức mà còn cho tôi những kỷ niệm, tình bạn và bài học cuộc sống quý giá."
+            }
+        };
+
+        function showStory(storyId) {
+            const story = stories[storyId];
+            document.getElementById('storyTitle').textContent = story.title;
+            document.getElementById('storyContent').textContent = story.content;
+            const modal = new bootstrap.Modal(document.getElementById('storyModal'));
+            modal.show();
+        }
+    </script>
 </body>
 </html>
