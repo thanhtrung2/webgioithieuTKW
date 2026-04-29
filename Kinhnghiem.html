@@ -166,6 +166,23 @@
             background-clip: text;
             font-weight: 600;
         }
+        
+        .badge {
+            padding: 8px 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .badge.bg-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+        
+        .card h-100:hover .badge {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -234,34 +251,43 @@
                 
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <div class="card h-100">
+                        <div class="card h-100" style="cursor: pointer;" onclick="window.open('https://github.com/thanhtrung2/websitequanlynhahang', '_blank')">
                             <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?w=600&h=400&fit=crop" class="card-img-top" alt="Dự án 1">
                             <div class="card-body">
-                                <h5 class="card-title">Website Quản lý sân đá bóng</h5>
-                                <p class="card-text">Hệ thống quản lý sân đá bóng và tìm kiếm và thống kê.</p>
-                                <p><strong>Công nghệ:</strong> HTML, MySQL, Bootstrap</p>
+                                <h5 class="card-title">Website Quản lý Nhà hàng</h5>
+                                <p class="card-text">Hệ thống quản lý nhà hàng với dashboard, đặt bàn, quản lý thực đơn và doanh thu.</p>
+                                <p><strong>Công nghệ:</strong> PHP, MySQL, Bootstrap</p>
+                                <div class="text-center mt-3">
+                                    <span class="badge bg-primary">🔗 Xem dự án trên GitHub</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="col-md-4 mb-3">
-                        <div class="card h-100">
+                        <div class="card h-100" style="cursor: pointer;" onclick="window.open('https://github.com/thanhtrung2/webgioithieuTKW', '_blank')">
                             <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop" class="card-img-top" alt="Dự án 2">
                             <div class="card-body">
-                                <h5 class="card-title">Ứng dụng Todo List</h5>
-                                <p class="card-text">Ứng dụng quản lý công việc với React và Firebase.</p>
-                                <p><strong>Công nghệ:</strong> React, Firebase, Material-UI</p>
+                                <h5 class="card-title">Website Giới thiệu Cá nhân</h5>
+                                <p class="card-text">Portfolio cá nhân với giới thiệu, trải nghiệm, kinh nghiệm và liên hệ.</p>
+                                <p><strong>Công nghệ:</strong> HTML, CSS, Bootstrap, JavaScript</p>
+                                <div class="text-center mt-3">
+                                    <span class="badge bg-primary">🔗 Xem dự án trên GitHub</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="col-md-4 mb-3">
-                        <div class="card h-100">
+                        <div class="card h-100" style="cursor: pointer;" onclick="window.open('https://github.com/thanhtrung2', '_blank')">
                             <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" class="card-img-top" alt="Dự án 3">
                             <div class="card-body">
-                                <h5 class="card-title">Website Bán hàng Online</h5>
-                                <p class="card-text">Trang thương mại điện tử với giỏ hàng và thanh toán.</p>
-                                <p><strong>Công nghệ:</strong> Node.js, MongoDB, Express</p>
+                                <h5 class="card-title">Các dự án khác</h5>
+                                <p class="card-text">Xem thêm các dự án khác của tôi trên GitHub profile.</p>
+                                <p><strong>Công nghệ:</strong> Đa dạng</p>
+                                <div class="text-center mt-3">
+                                    <span class="badge bg-primary">🔗 Xem GitHub Profile</span>
+                                </div>
                             </div>
                         </div>
                     </div>
