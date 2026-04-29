@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chia sẻ - Nguyễn Thành Trung</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .quote-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-size: 1.2em;
+        }
+        .tip-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        .audio-player {
+            width: 100%;
+            margin: 20px 0;
+        }
+        .blog-post {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .blog-post h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Gioithieu.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Trainghiem.html">Trải nghiệm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Kinhnghiem.html">Kinh nghiệm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Chiase.html">Chia sẻ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Inspirational Quote -->
+        <div class="quote-card text-center">
+            <h3>"Học tập không phải là sự chuẩn bị cho cuộc sống; học tập chính là cuộc sống."</h3>
+            <p>- John Dewey</p>
+        </div>
+
+        <!-- Learning Tips -->
+        <div class="card">
+            <div class="card-body p-5">
+                <h2 class="text-center mb-4">Chia sẻ kinh nghiệm học tập</h2>
+                
+                <div class="tip-card">
+                    <h4>💡 Học lập trình hiệu quả</h4>
+                    <p>
+                        Theo kinh nghiệm của tôi, cách tốt nhất để học lập trình là thực hành mỗi ngày. 
+                        Đừng chỉ đọc sách hay xem video, hãy code theo và tự tạo ra các dự án nhỏ của riêng bạn. 
+                        Mỗi dòng code bạn viết đều là một bài học quý giá.
+                    </p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>🎯 Quản lý thời gian</h4>
+                    <p>
+                        Trong 4 năm đại học, tôi đã học được cách cân bằng giữa học tập, dự án cá nhân và 
+                        các hoạt động ngoại khóa. Sử dụng kỹ thuật Pomodoro (25 phút tập trung + 5 phút nghỉ) 
+                        đã giúp tôi tăng năng suất học tập đáng kể.
+                    </p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>🤝 Làm việc nhóm</h4>
+                    <p>
+                        Kỹ năng làm việc nhóm rất quan trọng trong ngành IT. Hãy học cách sử dụng Git, 
+                        giao tiếp hiệu quả với đồng đội, và luôn sẵn sàng chia sẻ kiến thức. Một team tốt 
+                        sẽ giúp bạn phát triển nhanh hơn rất nhiều.
+                    </p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>📚 Học từ thất bại</h4>
+                    <p>
+                        Đừng sợ mắc lỗi! Mỗi bug, mỗi lỗi trong code đều là cơ hội để bạn học hỏi. 
+                        Tôi đã từng debug một lỗi trong 3 ngày, nhưng sau đó tôi hiểu sâu hơn về cách 
+                        hệ thống hoạt động. Thất bại là bước đệm cho thành công.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Posts -->
+        <div class="card">
+            <div class="card-body p-5">
+                <h2 class="text-center mb-4">Bài viết chia sẻ</h2>
+                
+                <div class="blog-post">
+                    <h4>Làm thế nào để bắt đầu với Web Development?</h4>
+                    <p class="text-muted">Đăng ngày: 15/03/2026</p>
+                    <p>
+                        Web Development là một trong những lĩnh vực phổ biến nhất trong IT hiện nay. 
+                        Để bắt đầu, bạn cần nắm vững ba công nghệ cơ bản: HTML, CSS và JavaScript. 
+                        HTML giúp bạn tạo cấu trúc trang web, CSS làm đẹp giao diện, còn JavaScript 
+                        mang lại tính tương tác.
+                    </p>
+                    <p>
+                        Lời khuyên của tôi là hãy bắt đầu với các dự án nhỏ như tạo landing page, 
+                        portfolio cá nhân, rồi dần dần nâng cao với các framework như React hay Vue.js. 
+                        Đừng cố học tất cả cùng lúc, hãy từng bước một và thực hành nhiều.
+                    </p>
+                </div>
+
+                <div class="blog-post">
+                    <h4>Kinh nghiệm thực tập tại công ty phần mềm</h4>
+                    <p class="text-muted">Đăng ngày: 20/02/2026</p>
+                    <p>
+                        Thực tập là cơ hội tuyệt vời để áp dụng kiến thức đã học vào thực tế. 
+                        Trong thời gian thực tập, tôi đã học được rất nhiều điều mà sách vở không dạy: 
+                        cách làm việc với code base lớn, quy trình code review, và tầm quan trọng của 
+                        việc viết code sạch và dễ bảo trì.
+                    </p>
+                    <p>
+                        Đừng ngại hỏi khi gặp khó khăn, và luôn chủ động học hỏi từ các senior developer. 
+                        Họ có rất nhiều kinh nghiệm quý báu để chia sẻ. Hãy tận dụng tối đa thời gian 
+                        thực tập để học hỏi và phát triển bản thân.
+                    </p>
+                </div>
+
+                <div class="blog-post">
+                    <h4>Tại sao nên tham gia các dự án nhóm?</h4>
+                    <p class="text-muted">Đăng ngày: 05/01/2026</p>
+                    <p>
+                        Làm việc một mình có thể giúp bạn tập trung, nhưng làm việc nhóm sẽ giúp bạn 
+                        phát triển toàn diện hơn. Qua các dự án nhóm, tôi đã học được cách sử dụng Git 
+                        hiệu quả, cách phân chia công việc, và cách giải quyết xung đột trong team.
+                    </p>
+                    <p>
+                        Hơn nữa, mỗi thành viên trong nhóm đều có điểm mạnh riêng. Bạn sẽ học được 
+                        rất nhiều từ cách làm việc của người khác. Đây là kỹ năng cực kỳ quan trọng 
+                        khi bạn đi làm sau này.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Images Gallery -->
+        <div class="card">
+            <div class="card-body p-4">
+                <h2 class="text-center mb-4">Hình ảnh hoạt động</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Workshop" class="img-fluid rounded">
+                        <p class="text-center mt-2">Workshop lập trình</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="Hackathon" class="img-fluid rounded">
+                        <p class="text-center mt-2">Tham gia Hackathon</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Presentation" class="img-fluid rounded">
+                        <p class="text-center mt-2">Thuyết trình dự án</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

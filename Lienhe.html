@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Nguyễn Thành Trung</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .contact-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .contact-icon {
+            font-size: 2em;
+            color: #667eea;
+            margin-right: 20px;
+            width: 60px;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .social-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            color: white;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+        .social-btn:hover {
+            transform: scale(1.2);
+        }
+        .facebook { background: #3b5998; }
+        .github { background: #333; }
+        .linkedin { background: #0077b5; }
+        .email-btn { background: #ea4335; }
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 12px 40px;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Gioithieu.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Trainghiem.html">Trải nghiệm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Kinhnghiem.html">Kinh nghiệm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Chiase.html">Chia sẻ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Lienhe.html">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contact Information -->
+        <div class="card">
+            <div class="card-body p-5">
+                <h2 class="text-center mb-4">Thông tin liên hệ</h2>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">👤</div>
+                                <div>
+                                    <h5 class="mb-1">Họ và tên</h5>
+                                    <p class="mb-0">Nguyễn Thành Trung</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <h5 class="mb-1">Số điện thoại</h5>
+                                    <p class="mb-0"><a href="tel:0392647923" class="text-decoration-none">0392647923</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <h5 class="mb-1">Email</h5>
+                                    <p class="mb-0"><a href="mailto:tn647923@gmail.com" class="text-decoration-none">tn647923@gmail.com</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">🎓</div>
+                                <div>
+                                    <h5 class="mb-1">Trường</h5>
+                                    <p class="mb-0">Đại học Trà Vinh</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">🆔</div>
+                                <div>
+                                    <h5 class="mb-1">Mã số sinh viên</h5>
+                                    <p class="mb-0">110122195</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📚</div>
+                                <div>
+                                    <h5 class="mb-1">Lớp</h5>
+                                    <p class="mb-0">DA22TTC</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="text-center mt-4">
+                            <h4>Kết nối với tôi</h4>
+                            <div class="social-links">
+                                <a href="https://facebook.com" target="_blank" class="social-btn facebook" title="Facebook">
+                                    📘
+                                </a>
+                                <a href="https://github.com" target="_blank" class="social-btn github" title="GitHub">
+                                    💻
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" class="social-btn linkedin" title="LinkedIn">
+                                    💼
+                                </a>
+                                <a href="mailto:tn647923@gmail.com" class="social-btn email-btn" title="Email">
+                                    ✉️
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <h4 class="text-center mb-4">Gửi tin nhắn cho tôi</h4>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Họ và tên *</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Số điện thoại</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Tiêu đề *</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Nội dung *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">
+                                        Gửi tin nhắn
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Show success message
+            alert('Cảm ơn bạn đã liên hệ! Tôi sẽ phản hồi sớm nhất có thể.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
