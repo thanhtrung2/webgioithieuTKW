@@ -388,9 +388,9 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
                     <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 25px 30px;">
-                        <h5 class="modal-title" id="storyTitle" style="font-weight: 600; font-size: 1.5em; display: flex; align-items: center;">
+                        <h5 class="modal-title" style="font-weight: 600; font-size: 1.5em; display: flex; align-items: center;">
                             <span style="font-size: 1.5em; margin-right: 15px;">📖</span>
-                            <span></span>
+                            <span id="storyTitle"></span>
                         </h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" style="filter: brightness(0) invert(1);"></button>
                     </div>
@@ -426,7 +426,7 @@
 
         function showStory(storyId) {
             const story = stories[storyId];
-            document.getElementById('storyTitle').querySelector('span:last-child').textContent = story.title;
+            document.getElementById('storyTitle').textContent = story.title;
             document.getElementById('storyContent').textContent = story.content;
             const modal = new bootstrap.Modal(document.getElementById('storyModal'));
             modal.show();
