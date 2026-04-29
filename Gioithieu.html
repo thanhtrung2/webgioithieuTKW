@@ -193,6 +193,36 @@
             transform: scale(1.05) translateY(-5px);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
         }
+        
+        .video-container {
+            transition: all 0.4s ease;
+        }
+        
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4) !important;
+        }
+        
+        video {
+            background: #000;
+        }
+        
+        audio {
+            outline: none;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .audio-container {
+            transition: all 0.4s ease;
+        }
+        
+        .audio-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3) !important;
+        }
     </style>
 </head>
 <body>
@@ -274,6 +304,76 @@
                             và dự án thực tế. Tôi luôn nỗ lực phát triển bản thân và không ngừng học hỏi để 
                             trở thành một lập trình viên chuyên nghiệp.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video & Audio Section -->
+        <div class="card">
+            <div class="card-body p-5">
+                <h2 class="text-center mb-4">Video & Audio giới thiệu</h2>
+                
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <h4 class="text-center mb-3" style="color: #667eea;">Video giới thiệu Đại học Trà Vinh</h4>
+                        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <!-- VIDEO YOUTUBE - Đã sửa đúng cách -->
+                            <iframe 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 15px; border: none;" 
+                                src="https://www.youtube.com/embed/YWTBmU_GQPA" 
+                                title="Video giới thiệu Đại học Trà Vinh" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-center mt-3 text-muted">
+                            <small>✅ Video YouTube đã được nhúng thành công!</small><br>
+                            <small>💡 Để thay video khác: Thay <code>YWTBmU_GQPA</code> bằng ID video YouTube mới</small>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-center mb-3" style="color: #667eea;">Audio giới thiệu</h4>
+                        
+                        <!-- CÁCH 1: FILE AUDIO LOCAL - Bỏ comment và đặt file audio.mp3 cùng thư mục -->
+                        <!-- 
+                        <div class="audio-container" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                            <audio controls style="width: 100%; border-radius: 10px;">
+                                <source src="audio.mp3" type="audio/mpeg">
+                                Trình duyệt của bạn không hỗ trợ audio.
+                            </audio>
+                        </div>
+                        -->
+                        
+                        <!-- CÁCH 2: LINK AUDIO TRỰC TIẾP - Bỏ comment và thay link -->
+                        <!-- 
+                        <div class="audio-container" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                            <audio controls style="width: 100%; border-radius: 10px;">
+                                <source src="https://example.com/your-audio.mp3" type="audio/mpeg">
+                                Trình duyệt của bạn không hỗ trợ audio.
+                            </audio>
+                        </div>
+                        -->
+                        
+                        <!-- AUDIO MẪU TẠM THỜI - Xóa khi đã có audio thật -->
+                        <div class="audio-container" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                            <div class="text-center p-4">
+                                <i class="fas fa-music" style="font-size: 3em; color: #667eea; margin-bottom: 15px;"></i>
+                                <p style="color: #666; margin: 0;">Chưa có audio giới thiệu</p>
+                                <small style="color: #999;">Vui lòng thêm file audio theo hướng dẫn bên dưới</small>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-3" style="border-radius: 10px; border-left: 4px solid #667eea;">
+                            <strong>� Hướng dẫn thêm audio:</strong><br>
+                            <strong>File local:</strong> Bỏ comment "CÁCH 1" và đặt file <code>audio.mp3</code> cùng thư mục<br>
+                            <strong>Link trực tiếp:</strong> Bỏ comment "CÁCH 2" và thay link audio<br>
+                            <em>⚠️ Link Facebook KHÔNG thể dùng trực tiếp!</em>
+                        </div>
                     </div>
                 </div>
             </div>
