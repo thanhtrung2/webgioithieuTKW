@@ -339,17 +339,22 @@
 
         <!-- Story Modal -->
         <div class="modal fade" id="storyModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="storyTitle">Câu chuyện</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 25px 30px;">
+                        <h5 class="modal-title" id="storyTitle" style="font-weight: 600; font-size: 1.5em; display: flex; align-items: center;">
+                            <span style="font-size: 1.5em; margin-right: 15px;">📖</span>
+                            <span></span>
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" style="filter: brightness(0) invert(1);"></button>
                     </div>
-                    <div class="modal-body">
-                        <p id="storyContent"></p>
+                    <div class="modal-body" style="padding: 35px 40px; background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);">
+                        <p id="storyContent" style="line-height: 2; font-size: 1.1em; color: #444; text-align: justify; text-indent: 30px; margin: 0;"></p>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <div class="modal-footer" style="border: none; padding: 20px 30px; background: #f8f9fa;">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%); border: none; padding: 10px 30px; border-radius: 25px; font-weight: 600;">
+                            Đóng
+                        </button>
                     </div>
                 </div>
             </div>
@@ -394,7 +399,8 @@
                     return;
                 }
                 
-                titleElement.textContent = story.title;
+                // Set title (chỉ set text vào span thứ 2)
+                titleElement.querySelector('span:last-child').textContent = story.title;
                 contentElement.textContent = story.content;
                 
                 const modal = new bootstrap.Modal(modalElement);
