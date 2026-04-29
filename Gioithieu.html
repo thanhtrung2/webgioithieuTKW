@@ -183,45 +183,14 @@
             background-clip: text;
         }
         
-        .img-wrapper {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            cursor: pointer;
-        }
-        
-        .img-wrapper::before {
-            content: '👁️ Xem câu chuyện';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(102, 126, 234, 0.95);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            opacity: 0;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 0.9em;
-            white-space: nowrap;
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        .img-wrapper:hover::before {
-            opacity: 1;
-        }
-        
         .img-fluid {
             transition: all 0.4s ease;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            width: 100%;
         }
         
-        .img-wrapper:hover .img-fluid {
-            transform: scale(1.05);
+        .img-fluid:hover {
+            transform: scale(1.05) translateY(-5px);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
         }
     </style>
@@ -316,45 +285,16 @@
                 <h2 class="text-center mb-4">Hình ảnh</h2>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <div class="img-wrapper" onclick="showStory('story1')">
-                            <img src="https://dean1665.vn/uploads/school/avt-dhtv.jpg" alt="Khuôn viên trường" class="img-fluid">
-                        </div>
+                        <img src="https://dean1665.vn/uploads/school/avt-dhtv.jpg" alt="Khuôn viên trường" class="img-fluid">
                         <p class="text-center mt-2">Khuôn viên Đại học Trà Vinh</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="img-wrapper" onclick="showStory('story2')">
-                            <img src="https://navigates.vn/wp-content/uploads/2023/10/Hinh-anh-lop-hoc-Dai-hoc-Tra-Vinh-3.jpg" alt="Học tập" class="img-fluid">
-                        </div>
+                        <img src="https://navigates.vn/wp-content/uploads/2023/10/Hinh-anh-lop-hoc-Dai-hoc-Tra-Vinh-3.jpg" alt="Học tập" class="img-fluid">
                         <p class="text-center mt-2">Học tập và nghiên cứu</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="img-wrapper" onclick="showStory('story3')">
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Bạn bè" class="img-fluid">
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Bạn bè" class="img-fluid">
                         <p class="text-center mt-2">Cùng bạn bè</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Story Modal -->
-        <div class="modal fade" id="storyModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
-                    <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 25px 30px;">
-                        <h5 class="modal-title" style="font-weight: 600; font-size: 1.5em; display: flex; align-items: center;">
-                            <span style="font-size: 1.5em; margin-right: 15px;">📖</span>
-                            <span id="storyTitle"></span>
-                        </h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" style="filter: brightness(0) invert(1);"></button>
-                    </div>
-                    <div class="modal-body" style="padding: 35px 40px; background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);">
-                        <p id="storyContent" style="line-height: 2; font-size: 1.1em; color: #444; text-align: justify; text-indent: 30px; margin: 0;"></p>
-                    </div>
-                    <div class="modal-footer" style="border: none; padding: 20px 30px; background: #f8f9fa;">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%); border: none; padding: 10px 30px; border-radius: 25px; font-weight: 600;">
-                            Đóng
-                        </button>
                     </div>
                 </div>
             </div>
@@ -362,58 +302,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        console.log('Script loaded successfully');
-        
-        const stories = {
-            story1: {
-                title: "Khuôn viên Đại học Trà Vinh",
-                content: "Ngày đầu tiên đặt chân đến Đại học Trà Vinh, tôi đã bị choáng ngợp bởi khuôn viên xanh mát và rộng lớn. Những hàng cây xanh mướt, những tòa nhà hiện đại, và không khí học tập sôi động đã khiến tôi cảm thấy đây chính là nơi tôi sẽ dành 4 năm thanh xuân đẹp nhất. Mỗi sáng đi học, tôi thường dừng lại ở hồ nước giữa sân trường, ngắm nhìn ánh nắng ban mai rọi xuống mặt nước lấp lánh. Đó là khoảnh khắc bình yên giúp tôi sẵn sàng cho một ngày học tập đầy năng lượng."
-            },
-            story2: {
-                title: "Học tập và nghiên cứu",
-                content: "Những giờ học trên lớp luôn là khoảng thời gian tôi trân trọng nhất. Tôi còn nhớ buổi học đầu tiên về lập trình, khi thầy giáo viết những dòng code đầu tiên lên bảng, tôi cảm thấy như đang được mở ra một thế giới hoàn toàn mới. Từ những dòng 'Hello World' đơn giản đến những thuật toán phức tạp, mỗi bài học đều là một thử thách thú vị. Tôi thường ở lại thư viện đến tận khuya, cùng bạn bè tranh luận về các giải pháp lập trình, debug code cho đến khi tìm ra lỗi. Những đêm thức trắng ấy giờ nghĩ lại thật đáng nhớ."
-            },
-            story3: {
-                title: "Cùng bạn bè",
-                content: "Bạn bè là món quà quý giá nhất mà đại học mang lại cho tôi. Chúng tôi cùng nhau trải qua biết bao kỷ niệm: từ những buổi làm bài tập nhóm căng thẳng trước deadline, những buổi hackathon thức trắng đêm, đến những chuyến đi chơi cuối tuần để xả stress. Tôi nhớ nhất lần chúng tôi cùng nhau làm dự án cuối kỳ, mỗi người một nhiệm vụ, làm việc đến 3 giờ sáng nhưng không ai than mệt. Khi dự án hoàn thành và được điểm cao, niềm vui ấy không gì sánh bằng. Những người bạn này không chỉ là đồng đội học tập mà còn là anh em, là những người sẽ đồng hành cùng tôi trên con đường sự nghiệp sau này."
-            }
-        };
-
-        function showStory(storyId) {
-            console.log('showStory called with:', storyId);
-            try {
-                const story = stories[storyId];
-                if (!story) {
-                    console.error('Story not found:', storyId);
-                    return;
-                }
-                console.log('Story found:', story);
-                
-                const titleElement = document.getElementById('storyTitle');
-                const contentElement = document.getElementById('storyContent');
-                const modalElement = document.getElementById('storyModal');
-                
-                if (!titleElement || !contentElement || !modalElement) {
-                    console.error('Modal elements not found');
-                    return;
-                }
-                
-                titleElement.textContent = story.title;
-                contentElement.textContent = story.content;
-                
-                const modal = new bootstrap.Modal(modalElement);
-                modal.show();
-                console.log('Modal shown successfully');
-            } catch (error) {
-                console.error('Error in showStory:', error);
-            }
-        }
-        
-        // Test khi trang load xong
-        window.addEventListener('DOMContentLoaded', function() {
-            console.log('Page loaded, Bootstrap version:', bootstrap.Modal ? 'loaded' : 'not loaded');
-        });
-    </script>
 </body>
 </html>

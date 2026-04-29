@@ -186,37 +186,7 @@
             width: 100%;
         }
         
-        .img-wrapper {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            cursor: pointer;
-        }
-        
-        .img-wrapper::before {
-            content: '👁️ Xem câu chuyện';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(102, 126, 234, 0.95);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            opacity: 0;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 0.9em;
-            white-space: nowrap;
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        .img-wrapper:hover::before {
-            opacity: 1;
-        }
-        
-        .img-wrapper:hover .img-fluid {
+        .img-fluid:hover {
             transform: scale(1.05);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
         }
@@ -362,75 +332,23 @@
                 <h2 class="text-center mb-4">Hình ảnh hoạt động</h2>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <div class="img-wrapper" onclick="showStory('workshop')">
-                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Workshop" class="img-fluid">
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Workshop" class="img-fluid">
                         <p class="text-center mt-2">Workshop lập trình</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="img-wrapper" onclick="showStory('hackathon')">
-                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="Hackathon" class="img-fluid">
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="Hackathon" class="img-fluid">
                         <p class="text-center mt-2">Tham gia Hackathon</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <div class="img-wrapper" onclick="showStory('presentation')">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Presentation" class="img-fluid">
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Presentation" class="img-fluid">
                         <p class="text-center mt-2">Thuyết trình dự án</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Story Modal -->
-        <div class="modal fade" id="storyModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
-                    <div class="modal-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 25px 30px;">
-                        <h5 class="modal-title" style="font-weight: 600; font-size: 1.5em; display: flex; align-items: center;">
-                            <span style="font-size: 1.5em; margin-right: 15px;">📖</span>
-                            <span id="storyTitle"></span>
-                        </h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" style="filter: brightness(0) invert(1);"></button>
-                    </div>
-                    <div class="modal-body" style="padding: 35px 40px; background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);">
-                        <p id="storyContent" style="line-height: 2; font-size: 1.1em; color: #444; text-align: justify; text-indent: 30px; margin: 0;"></p>
-                    </div>
-                    <div class="modal-footer" style="border: none; padding: 20px 30px; background: #f8f9fa;">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%); border: none; padding: 10px 30px; border-radius: 25px; font-weight: 600;">
-                            Đóng
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const stories = {
-            workshop: {
-                title: "Workshop lập trình",
-                content: "Workshop lập trình là nơi tôi được chia sẻ kiến thức và kinh nghiệm của mình với các bạn sinh viên khóa dưới. Tôi còn nhớ buổi workshop đầu tiên về 'Làm thế nào để bắt đầu với Web Development', tôi đã chuẩn bị rất kỹ lưỡng, từ slide thuyết trình đến code demo. Khi đứng trước hơn 50 bạn sinh viên, tôi cảm thấy hơi lo lắng nhưng cũng rất phấn khích. Trong suốt 2 tiếng, tôi đã hướng dẫn các bạn từ những kiến thức cơ bản nhất về HTML, CSS cho đến cách tạo một trang web đơn giản. Điều tôi thích nhất là phần Q&A, khi các bạn đặt câu hỏi và tôi có thể giúp họ giải quyết vấn đề. Cảm giác được chia sẻ kiến thức và thấy ánh mắt háo hức của các bạn thật tuyệt vời. Sau workshop, nhiều bạn đã liên hệ với tôi để hỏi thêm và một số bạn đã trở thành bạn bè thân thiết của tôi."
-            },
-            hackathon: {
-                title: "Tham gia Hackathon",
-                content: "Hackathon là một trong những trải nghiệm đáng nhớ nhất trong quá trình học của tôi. Đó là cuộc thi lập trình 24 giờ không ngừng nghỉ, nơi các team phải xây dựng một sản phẩm hoàn chỉnh từ ý tưởng đến demo. Team của tôi gồm 4 người, mỗi người một vai trò: frontend, backend, UI/UX và project manager. Chúng tôi chọn đề tài xây dựng một ứng dụng hỗ trợ học tập cho sinh viên. Những giờ đầu tiên, chúng tôi brainstorm ý tưởng, vẽ wireframe, thiết kế database. Sau đó là 20 tiếng code liên tục, chỉ nghỉ để ăn và uống nước tăng lực. Có lúc gặp bug không giải quyết được, có lúc muốn bỏ cuộc, nhưng tinh thần đồng đội đã giúp chúng tôi vượt qua. Khi demo sản phẩm trước ban giám khảo, tay tôi run run nhưng may mắn mọi thứ chạy tốt. Tuy không đạt giải nhất nhưng chúng tôi vào top 3, và quan trọng hơn là kinh nghiệm và tình bạn thu được."
-            },
-            presentation: {
-                title: "Thuyết trình dự án",
-                content: "Buổi thuyết trình đồ án cuối kỳ là lúc tôi được thể hiện tất cả những gì mình đã làm trong suốt học kỳ. Dự án của nhóm tôi là một hệ thống quản lý bán hàng online với đầy đủ tính năng: đăng nhập, giỏ hàng, thanh toán, quản lý đơn hàng, thống kê doanh thu. Chúng tôi đã làm việc không ngừng nghỉ trong 3 tháng để hoàn thiện dự án này. Ngày thuyết trình, tôi là người đại diện nhóm trình bày trước hội đồng gồm 5 giảng viên. Tôi đã chuẩn bị rất kỹ: slide đẹp mắt, demo mượt mà, và sẵn sàng trả lời mọi câu hỏi. Trong 30 phút thuyết trình, tôi giới thiệu về bối cảnh dự án, công nghệ sử dụng, kiến trúc hệ thống, và demo các tính năng chính. Phần Q&A khá căng thẳng với nhiều câu hỏi khó, nhưng nhờ chuẩn bị kỹ nên tôi trả lời được hết. Cuối cùng, nhóm chúng tôi đạt điểm 9.5/10, một kết quả xứng đáng với công sức bỏ ra. Đây là lần đầu tiên tôi cảm thấy tự hào về bản thân và nhóm của mình."
-            }
-        };
-
-        function showStory(storyId) {
-            const story = stories[storyId];
-            document.getElementById('storyTitle').textContent = story.title;
-            document.getElementById('storyContent').textContent = story.content;
-            const modal = new bootstrap.Modal(document.getElementById('storyModal'));
-            modal.show();
-        }
-    </script>
 </body>
 </html>
