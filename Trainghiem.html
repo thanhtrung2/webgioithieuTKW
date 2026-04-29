@@ -157,11 +157,17 @@
             transition: all 0.4s ease;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
+            width: 100%;
         }
         
-        .img-fluid::before {
+        .img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        
+        .img-wrapper::before {
             content: '👁️ Xem câu chuyện';
             position: absolute;
             top: 50%;
@@ -176,16 +182,17 @@
             font-weight: 600;
             font-size: 0.9em;
             white-space: nowrap;
+            z-index: 2;
+            pointer-events: none;
         }
         
-        .img-fluid:hover::before {
+        .img-wrapper:hover::before {
             opacity: 1;
         }
         
-        .img-fluid:hover {
-            transform: scale(1.05) translateY(-5px);
+        .img-wrapper:hover .img-fluid {
+            transform: scale(1.05);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
-            cursor: pointer;
         }
     </style>
 </head>
@@ -300,19 +307,27 @@
                 <h2 class="text-center mb-4">Kỷ niệm đáng nhớ</h2>
                 <div class="row">
                     <div class="col-md-3 mb-3">
-                        <img src="https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/473322270_1104806344462583_4221718231373178442_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=GjDPVZmOVv4Q7kNvwGq3cRX&_nc_oc=AdqIvEWOGnW_5pDcHZTf4aAWt7dY5tYxERS7b_zvaCP-pMd1527UOGEuvb_xcn2gf2Y&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=lubqBPLVZHPVm1kd1bDEXQ&_nc_ss=7b2a8&oh=00_Af1kMEs2p4XG5shvstIInJy3We6DSOD3r3ZhWW8lrPzP3A&oe=69F79957" alt="Năm 1" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year1')">
+                        <div class="img-wrapper" onclick="showStory('year1')">
+                            <img src="https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/473322270_1104806344462583_4221718231373178442_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=GjDPVZmOVv4Q7kNvwGq3cRX&_nc_oc=AdqIvEWOGnW_5pDcHZTf4aAWt7dY5tYxERS7b_zvaCP-pMd1527UOGEuvb_xcn2gf2Y&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=lubqBPLVZHPVm1kd1bDEXQ&_nc_ss=7b2a8&oh=00_Af1kMEs2p4XG5shvstIInJy3We6DSOD3r3ZhWW8lrPzP3A&oe=69F79957" alt="Năm 1" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Năm nhất</p>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <img src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/473081251_1104806787795872_7566194657441431916_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=nJ3zL01kQ00Q7kNvwG6mY71&_nc_oc=AdoR2xv5Gil7YK_s-4YIn_pet0GcGM2QUoMra55leJ5nwBoVEJ_jXhHZUZdm54SbOVI&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=3hGuJ5P3LjhIGzy3Kln5WA&_nc_ss=7b2a8&oh=00_Af2ig86SIy4ukmZO5U3h0SqLS9tTBddlPkqCxH0lnBEGmQ&oe=69F78719" alt="Năm 2" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year2')">
+                        <div class="img-wrapper" onclick="showStory('year2')">
+                            <img src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/473081251_1104806787795872_7566194657441431916_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=nJ3zL01kQ00Q7kNvwG6mY71&_nc_oc=AdoR2xv5Gil7YK_s-4YIn_pet0GcGM2QUoMra55leJ5nwBoVEJ_jXhHZUZdm54SbOVI&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=3hGuJ5P3LjhIGzy3Kln5WA&_nc_ss=7b2a8&oh=00_Af2ig86SIy4ukmZO5U3h0SqLS9tTBddlPkqCxH0lnBEGmQ&oe=69F78719" alt="Năm 2" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Năm hai</p>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <img src="anh3.jpg" alt="Năm 3" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year3')">
+                        <div class="img-wrapper" onclick="showStory('year3')">
+                            <img src="anh3.jpg" alt="Năm 3" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Năm ba</p>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <img src="anh4.jpg" alt="Năm 4" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('year4')">
+                        <div class="img-wrapper" onclick="showStory('year4')">
+                            <img src="anh4.jpg" alt="Năm 4" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Năm tư</p>
                     </div>
                 </div>

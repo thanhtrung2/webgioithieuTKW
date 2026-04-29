@@ -175,11 +175,17 @@
             transition: all 0.4s ease;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
+            width: 100%;
         }
         
-        .img-fluid::before {
+        .img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        
+        .img-wrapper::before {
             content: '👁️ Xem câu chuyện';
             position: absolute;
             top: 50%;
@@ -194,16 +200,17 @@
             font-weight: 600;
             font-size: 0.9em;
             white-space: nowrap;
+            z-index: 2;
+            pointer-events: none;
         }
         
-        .img-fluid:hover::before {
+        .img-wrapper:hover::before {
             opacity: 1;
         }
         
-        .img-fluid:hover {
-            transform: scale(1.05) translateY(-5px);
+        .img-wrapper:hover .img-fluid {
+            transform: scale(1.05);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
-            cursor: pointer;
         }
     </style>
 </head>
@@ -347,15 +354,21 @@
                 <h2 class="text-center mb-4">Hình ảnh hoạt động</h2>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Workshop" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('workshop')">
+                        <div class="img-wrapper" onclick="showStory('workshop')">
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Workshop" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Workshop lập trình</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="Hackathon" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('hackathon')">
+                        <div class="img-wrapper" onclick="showStory('hackathon')">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop" alt="Hackathon" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Tham gia Hackathon</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Presentation" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('presentation')">
+                        <div class="img-wrapper" onclick="showStory('presentation')">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Presentation" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Thuyết trình dự án</p>
                     </div>
                 </div>

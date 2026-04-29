@@ -174,6 +174,48 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        
+        .img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        
+        .img-wrapper::before {
+            content: '👁️ Xem câu chuyện';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(102, 126, 234, 0.95);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.9em;
+            white-space: nowrap;
+            z-index: 2;
+            pointer-events: none;
+        }
+        
+        .img-wrapper:hover::before {
+            opacity: 1;
+        }
+        
+        .img-fluid {
+            transition: all 0.4s ease;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            width: 100%;
+        }
+        
+        .img-wrapper:hover .img-fluid {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -266,15 +308,21 @@
                 <h2 class="text-center mb-4">Hình ảnh</h2>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <img src="https://dean1665.vn/uploads/school/avt-dhtv.jpg" alt="Khuôn viên trường" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('story1')">
+                        <div class="img-wrapper" onclick="showStory('story1')">
+                            <img src="https://dean1665.vn/uploads/school/avt-dhtv.jpg" alt="Khuôn viên trường" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Khuôn viên Đại học Trà Vinh</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <img src="https://navigates.vn/wp-content/uploads/2023/10/Hinh-anh-lop-hoc-Dai-hoc-Tra-Vinh-3.jpg" alt="Học tập" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('story2')">
+                        <div class="img-wrapper" onclick="showStory('story2')">
+                            <img src="https://navigates.vn/wp-content/uploads/2023/10/Hinh-anh-lop-hoc-Dai-hoc-Tra-Vinh-3.jpg" alt="Học tập" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Học tập và nghiên cứu</p>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Bạn bè" class="img-fluid rounded" style="cursor: pointer;" onclick="showStory('story3')">
+                        <div class="img-wrapper" onclick="showStory('story3')">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Bạn bè" class="img-fluid">
+                        </div>
                         <p class="text-center mt-2">Cùng bạn bè</p>
                     </div>
                 </div>
